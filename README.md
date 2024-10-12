@@ -41,6 +41,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Project Structure
 
+```
 src/
 ├── components/ # Reusable components (e.g., Button, InputField)
 ├── pages/ # Individual pages (e.g., Home, Profile, ItemDetail)
@@ -51,3 +52,4 @@ src/
 ├── App.tsx # Main app component
 ├── index.tsx # Entry point
 └── tsconfig.json # TypeScript configuration
+```
