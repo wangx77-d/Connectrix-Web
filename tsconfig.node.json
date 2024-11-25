@@ -1,10 +1,17 @@
 {
-  "compilerOptions": {
-    "composite": true,
-    "skipLibCheck": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
-  },
-  "include": ["vite.config.ts"]
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "target": "ESNext", // or ES6 if you need older browser compatibility
+        "module": "CommonJS", // CommonJS works for Node environments
+        "rootDir": "src",
+        "outDir": "dist",
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "jsx": "react-jsx", // Specify React JSX support
+        "strict": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts"],
+    "exclude": ["node_modules", "dist"]
 }
