@@ -2,6 +2,7 @@ import { Modal } from 'antd';
 import React, { useRef } from 'react';
 import { Box, Flex, Input, Button } from '@chakra-ui/react';
 import { CloseOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 import '@/styles/loginForm.css';
 
@@ -11,6 +12,14 @@ type LoginModalProps = {
 };
 
 export const LoginForm: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
+    const navigate = useNavigate();
+
+    const handleSignIn = () => {
+        console.log('sign in');
+        // Perform sign-in logic here if needed
+        navigate('/profile'); // Route to "/profile"
+    };
+
     return (
         <Modal
             open={isOpen}
@@ -44,7 +53,7 @@ export const LoginForm: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                             <Button
                                 className="login-modal-button"
                                 mt={4}
-                                onClick={() => alert('Sign in clicked')}
+                                onClick={handleSignIn}
                             >
                                 Sign in
                             </Button>

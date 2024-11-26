@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useLocation, NavLink } from 'react-router-dom';
 import '@/styles/nav.css';
 import ProfileSection from '../profileNav';
 
@@ -18,29 +18,40 @@ const navItems: NavItem[] = [
 ];
 
 const Navbar: React.FC = () => {
+    const location = useLocation();
+    const currentPath = location.pathname;
+
+    if (currentPath && currentPath.startsWith('/profile')) {
+        console.log(currentPath);
+    }
     return (
-        <nav>
+        <div className="nav-container">
             <div className="nav-logo">
                 <img src="/src/assets/navLogo.svg" alt="Logo" />
             </div>
-            <ul>
-                {navItems.map((item) => (
-                    <li key={item.to}>
-                        <NavLink
-                            to={item.to}
-                            className={({ isActive }) =>
-                                isActive ? 'active' : ''
-                            }
-                        >
-                            {item.label}
-                        </NavLink>
-                    </li>
-                ))}
-            </ul>
-
+            <nav>
+                <ul>
+                    {navItems.map((item) => (
+                        <li key={item.to}>
+                            <NavLink
+                                to={item.to}
+                                className={({ isActive }) =>
+                                    isActive ? 'active' : ''
+                                }
+                            >
+                                {item.label}
+                            </NavLink>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
             <ProfileSection contentComponent={null} />
-        </nav>
+        </div>
     );
 };
 
 export default Navbar;
+
+{
+    /* */
+}
