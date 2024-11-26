@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+.footer-container {
+    background: transparent;
+    color: #888888;
+    padding: 2rem 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.footer-link {
+    color: #888888;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.footer-link:hover {
+    color: #555555;
+}
+
+.footer-text {
+    color: #888888;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #888888;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #555555;
+}

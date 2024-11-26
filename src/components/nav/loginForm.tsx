@@ -1,7 +1,5 @@
 import { Button, Form, Modal, Checkbox, Input } from 'antd';
 import type { FormProps } from 'antd';
-import { Field } from '@/components/ui/field';
-
 import React, { useRef } from 'react';
 
 type FieldType = {
