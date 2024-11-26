@@ -1,0 +1,86 @@
+/* LoginModal.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.login-modal-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-modal {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #ffffff;
+    background: #24292e;
+}
+
+.login-modal-header {
+    font-size: 1.75rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.login-modal-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+    border: 1px solid #444d56;
+    border-radius: 6px;
+    background: #2f363d;
+    color: #ffffff;
+    transition: border-color 0.3s;
+}
+
+.login-modal-input:focus {
+    outline: none;
+    border-color: #0366d6;
+}
+
+.login-modal-button {
+    background-color: #2ea44f;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.login-modal-button:hover {
+    background-color: #22863a;
+}
+
+.login-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.login-modal-close:hover {
+    color: #c6c6c6;
+}
+
+.login-modal-link {
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.login-modal-link:hover {
+    text-decoration: underline;
+}
