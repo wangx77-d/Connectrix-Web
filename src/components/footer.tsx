@@ -21,21 +21,21 @@ const Footer: React.FC = () => {
             >
                 {/* Links Section */}
                 <Flex wrap="wrap" justify="center" mb={4}>
-                    <ChakraLink href="#" className="footer-link">
+                    <ChakraLink href="#" className="footer-text">
                         Company Profile
                     </ChakraLink>
                     <Text mx={1}>|</Text>
-                    <ChakraLink href="#" className="footer-link">
+                    <ChakraLink href="#" className="footer-text">
                         About Us
                     </ChakraLink>
                     <Text mx={1}>|</Text>
-                    <ChakraLink href="#" className="footer-link">
+                    <ChakraLink href="#" className="footer-text">
                         Privacy Policy
                     </ChakraLink>
                 </Flex>
 
                 {/* Contact Section */}
-                <Text fontSize="sm" mb={2} className="footer-text">
+                <Text fontSize="sm" mb={4} className="footer-text">
                     Business Cooperation Email:
                     <ChakraLink
                         href="mailto:info@connectrix-studio.com"
@@ -46,15 +46,12 @@ const Footer: React.FC = () => {
                 </Text>
 
                 {/* Copyright Section */}
-                <Text fontSize="sm" mb={2} className="footer-text">
+                <Text fontSize="sm" mb={6} className="footer-text">
                     Copyright 2024 connectrix-studio.com Corporation, All Rights
                     Reserved
                 </Text>
 
                 {/* Social Media Section */}
-                <Text fontSize="lg" mb={2} className="footer-text">
-                    Follow Us
-                </Text>
                 <Space size="large">
                     <ChakraLink
                         href="https://twitter.com"

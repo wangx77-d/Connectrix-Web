@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '@/styles/nav.css';
-import ProfileSection from './profileSection';
+import ProfileSection from '../profileNav';
 
 // Define a type for navigation items
 type NavItem = {
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
                 ))}
             </ul>
 
-            <ProfileSection />
+            <ProfileSection contentComponent={null} />
         </nav>
     );
 };

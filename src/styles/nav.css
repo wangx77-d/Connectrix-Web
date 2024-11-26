@@ -3,8 +3,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    margin: 5px 15px;
+    padding: 0px 0px 10px 20px;
+    margin: 5px 0px 5px 15px;
 }
 
 .nav-logo {
@@ -15,10 +15,6 @@ nav {
     width: 300px;
     /* height: 40px;
     border-radius: 50%; */
-}
-
-.nav-profile {
-    margin-left: 40px;
 }
 
 ul {
@@ -51,4 +47,18 @@ a.active {
     padding: 8px 16px;
     border-radius: 15px; /* Rounded corners */
     transition: background-color 0.3s ease;
+}
+
+.nav-profile {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 40px;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-search {
+    color: #1f1f1f;
+    border: none;
+    border-radius: 20px;
+    padding-left: 20px;
 }

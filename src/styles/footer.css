@@ -4,11 +4,9 @@
     background: transparent;
     color: #888888;
     padding: 2rem 1rem;
-    font-family: 'Orbitron', sans-serif;
 }
 
 .footer-link {
-    color: #888888;
     text-decoration: none;
     margin: 0 0.5rem;
     transition: color 0.3s;
@@ -19,14 +17,17 @@
     color: #555555;
 }
 
+.footer-text:hover {
+    color: #555555;
+}
+
 .footer-text {
-    color: #888888;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px 10px;
 }
 
 .social-icon {
     font-size: 24px;
-    color: #888888;
     transition: color 0.3s;
 }
 
