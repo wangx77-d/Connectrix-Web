@@ -1,4 +1,3 @@
-// RecentGamesPanel.tsx
 import React from 'react';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import ItemThumbCard from '@/components/item/thumbnail';
@@ -102,34 +101,34 @@ const TopItemsPanel: React.FC = () => {
   ];
 
   return (
-    <Box
-      p={6}
-      m={4}
-      height="280px"
-      // width="100%"
-      overflowX="auto"
-      overflowY="hidden"
-    >
-      <Text fontSize="xl" fontWeight="bold" mb={6} color="white">
+    <Box p={6} m={4}>
+      <Text fontSize="xl" fontWeight="bold" color="white">
         Top Items Panel
       </Text>
-      <Flex direction="row" justifyContent="flex-start" gap={6}>
-        {topItemsList.map((item, index) => (
-          <ItemThumbCard
-            key={index}
-            title={item.title}
-            description={item.description}
-            imageUrl={item.imageUrl}
-            category={item.category}
-            rating={item.rating}
-            sellerName={item.sellerName}
-            sellerAvatarUrl={item.sellerAvatarUrl}
-            status={item.status}
-            isHotItem={index < 3}
-            size="xs"
-          />
-        ))}
-      </Flex>
+      <Box
+        p={6}
+        maxHeight="450px"
+        overflowX="auto"
+        overflowY="hidden"
+      >
+        <Flex direction="row" justifyContent="flex-start" gap={6}>
+          {topItemsList.map((item, index) => (
+            <ItemThumbCard
+              key={index}
+              title={item.title}
+              description={item.description}
+              imageUrl={item.imageUrl}
+              category={item.category}
+              rating={item.rating}
+              sellerName={item.sellerName}
+              sellerAvatarUrl={item.sellerAvatarUrl}
+              status={item.status}
+              isHotItem={index < 3}
+              size="xs"
+            />
+          ))}
+        </Flex>
+      </Box>
     </Box>
   );
 };

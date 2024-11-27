@@ -34,17 +34,6 @@ const ItemCard: React.FC<ItemCardProps> = ({
   size = 'md',
   isHotItem = false,
 }) => {
-  console.log('ItemCardProps', {
-    title,
-    description,
-    imageUrl,
-    category,
-    rating,
-    sellerName,
-    sellerAvatarUrl,
-    status,
-    size,
-  });
   return (
     <Box
       position="relative"
@@ -71,22 +60,8 @@ const ItemCard: React.FC<ItemCardProps> = ({
         </Badge>
       ) : null}
 
-      <Box
-        borderRadius="lg"
-        // borderWidth="1px"
-        // height={40}
-        // position="relative"
-        mb={2}
-        // borderColor="#c20bf2"
-      >
-        <Flex
-          // direction="column"
-          // justifyContent="center"
-          // alignItems="center"
-
-          wrap="wrap"
-          justify="center"
-        >
+      <Box borderRadius="lg" mb={2}>
+        <Flex wrap="wrap" justify="center">
           <Image
             src={imageUrl}
             alt={`${title} Thumbnail`}
@@ -119,8 +94,8 @@ const ItemCard: React.FC<ItemCardProps> = ({
         src={sellerAvatarUrl}
         size="md"
         position="absolute"
-        top={-5}
-        right={50}
+        bottom={-5}
+        left={0}
         borderWidth={3}
         borderColor="#c20bf2"
       />

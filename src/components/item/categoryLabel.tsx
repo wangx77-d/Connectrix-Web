@@ -5,13 +5,13 @@ import { HiStar } from 'react-icons/hi';
 import { FaQuestionCircle } from 'react-icons/fa';
 import { ItemCategory } from '@/types/item';
 
-type CategoryLabel = {
+type CategoryLabelType = {
   category: ItemCategory;
   size?: 'xs' | 'sm' | 'md' | 'lg';
   style?: React.CSSProperties;
 };
 
-const CategoryLabel: React.FC<CategoryLabel> = ({
+const CategoryLabel: React.FC<CategoryLabelType> = ({
   category,
   size = 'md',
   style,

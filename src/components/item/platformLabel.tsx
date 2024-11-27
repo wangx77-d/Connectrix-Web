@@ -6,11 +6,13 @@ import { BsNintendoSwitch } from 'react-icons/bs';
 import { IoGameController } from 'react-icons/io5';
 
 type PlatformLabelProps = {
-  platform: 'PlayStation' | 'Steam' | 'Nintendo' | 'Xbox' | 'PC';
+  platform: string;
+  size?: 'xs' | 'sm' | 'md' | 'lg';
 };
 
 const PlatformLabel: React.FC<PlatformLabelProps> = ({
   platform,
+  size = 'md',
 }) => {
   let colorPalette;
   let icon;
@@ -40,10 +42,9 @@ const PlatformLabel: React.FC<PlatformLabelProps> = ({
   return (
     <Badge
       colorPalette={colorPalette}
-      px={2}
-      py={1}
-      borderRadius="md"
-      mb={2}
+      mr={2}
+      borderRadius={size}
+      size={size}
       variant="solid"
     >
       {icon}
