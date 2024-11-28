@@ -1,7 +1,7 @@
 // GameCard.tsx
 import React from 'react';
 import { Box, Image, Text } from '@chakra-ui/react';
-import PlatformLabel from './PlatformLabel';
+import PlatformLabel from '../item/platformLabel';
 
 type GameCardProps = {
   name: string;

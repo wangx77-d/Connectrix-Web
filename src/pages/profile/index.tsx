@@ -1,4 +1,7 @@
 import React from 'react';
+import SidebarPanel from '@/components/profile/siderbarPanel';
+import BioCardPanel from '@/components/profile/bioCardPanel';
+// import FeatureListingPanel from '@/components/featureListing';
 
 interface ProfileProps {
   // Add any props if needed
@@ -7,9 +10,8 @@ interface ProfileProps {
 const Profile: React.FC<ProfileProps> = () => {
   return (
     <div className="profile">
-      <h1>User Profile</h1>
-      <p>This is the profile page for the user.</p>
-      {/* Add more profile-related content here */}
+      <SidebarPanel />
+      <BioCardPanel />
     </div>
   );
 };
