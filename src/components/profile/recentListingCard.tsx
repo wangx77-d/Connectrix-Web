@@ -78,7 +78,7 @@ const RecentListingCard: React.FC = () => {
   ];
 
   return (
-    <Box p={4} width="80%">
+    <Box p={4} width="85%">
       <Text fontSize="lg" fontWeight="bold" mb={4} color="white">
         Recent Listing
       </Text>

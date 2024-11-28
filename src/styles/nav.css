@@ -82,3 +82,8 @@ a.active {
   border-radius: 20px;
   padding-left: 20px;
 }
+
+.nav-login,
+.nav-notification {
+  cursor: pointer;
+}

@@ -7,12 +7,9 @@ import { FaMapMarkerAlt } from 'react-icons/fa';
 const BioCard: React.FC = () => {
   return (
     <Box p={4}>
-      <Text fontSize="lg" fontWeight="bold" mb={4}>
-        BIO
-      </Text>
       <Flex align="center" mb={4}>
         <Avatar
-          size="lg"
+          size="2xl"
           name="Marcella Aurelia"
           src="https://img.freepik.com/premium-vector/gamer-streamer-mascot-logo-vector-illustration_382438-609.jpg"
           mr={4}
@@ -25,12 +22,16 @@ const BioCard: React.FC = () => {
             He/Him/His
           </Text>
         </Box>
-      </Flex>
-      <Flex align="center">
-        <Icon fontSize="sm" mr={2}>
+        <Icon fontSize="sm" ml={6}>
           <FaMapMarkerAlt />
         </Icon>
-        <Text>Canada</Text>
+        <Text ml={2}>Canada</Text>
+      </Flex>
+      <Flex align="center">
+        <Text fontSize="sm" color="gray.400">
+          ...He did not choose the gamer life, the gamer life chose
+          him.
+        </Text>
       </Flex>
     </Box>
   );

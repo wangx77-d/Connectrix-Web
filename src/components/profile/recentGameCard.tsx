@@ -70,6 +70,7 @@ const RecentGamesCard: React.FC = () => {
       <Box
         pb="6"
         maxHeight="220px"
+        width="80%"
         overflowX="scroll"
         overflowY="hidden"
       >

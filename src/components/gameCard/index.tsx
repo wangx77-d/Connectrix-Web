@@ -46,7 +46,7 @@ const GameCard: React.FC<GameCardProps> = ({
             | 'PC'
         }
         size="xs"
-        style={{ position: 'absolute', bottom: 3, left: -3 }}
+        style={{ position: 'absolute', bottom: 5, left: 5 }}
       />
     </Box>
   );

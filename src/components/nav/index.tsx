@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, NavLink } from 'react-router-dom';
 import '@/styles/nav.css';
-import { Flex, Input } from '@chakra-ui/react';
+import { Flex, Input, IconButton } from '@chakra-ui/react';
 import { Avatar } from '@/components/ui/avatar';
-import { LoginForm } from '../profileNav/loginForm';
 import { useNavigate } from 'react-router-dom';
 
-import ProfilePanel from '@/pages/profile/panel';
+import { IoLogOutOutline } from 'react-icons/io5';
 
 // Define a type for navigation items
 type NavItem = {
@@ -27,25 +26,24 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  const [showMenu, setShowMenu] = useState(false);
-
-  const [rightSideComponent, setRightSideComponent] =
-    useState<React.ReactNode | null>(null);
+  const [avatarIcon, setAvatarIcon] = useState<React.ReactNode>(null);
 
   useEffect(() => {
-    if (currentPath && currentPath.startsWith('/profile')) {
-      setRightSideComponent(<ProfilePanel />);
+    if (currentPath === '/profile') {
+      setAvatarIcon(<IoLogOutOutline />);
+    } else {
+      setAvatarIcon(null);
     }
   }, [currentPath]);
 
-  const handleAvatarClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    console.log('Avatar clicked', e);
-    // setShowMenu(!showMenu);
-    navigate('/login');
-  };
-
-  const handleClose = () => {
-    setShowMenu(!showMenu);
+  const handleAvatarClick = (
+    e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>
+  ) => {
+    if (currentPath === '/profile') {
+      navigate('/');
+    } else {
+      navigate('/login');
+    }
   };
 
   return (
@@ -83,13 +81,29 @@ const Navbar: React.FC = () => {
             size="md"
             src="/src/assets/notification.svg"
             onClick={handleAvatarClick}
+            className="nav-notification"
           />
-          <Avatar size="lg" onClick={handleAvatarClick} />
+
+          {currentPath === '/profile' ? (
+            <IconButton
+              aria-label="Logout"
+              rounded="full"
+              variant="outline"
+              colorPalette="gray"
+              bg="gray.800"
+              onClick={handleAvatarClick}
+            >
+              {avatarIcon}
+            </IconButton>
+          ) : (
+            <Avatar
+              size="lg"
+              onClick={handleAvatarClick}
+              className="nav-login"
+            />
+          )}
         </Flex>
       </div>
-
-      <LoginForm isOpen={showMenu} onClose={handleClose} />
-      {/* <ProfileSection contentComponent={rightSideComponent} /> */}
     </div>
   );
 };
