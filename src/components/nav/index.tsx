@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, NavLink } from 'react-router-dom';
 import '@/styles/nav.css';
-import ProfileSection from '../profileNav';
-import {
-  Box,
-  Flex,
-  Text,
-  Input,
-  IconButton,
-  HStack,
-} from '@chakra-ui/react';
+import { Flex, Input } from '@chakra-ui/react';
 import { Avatar } from '@/components/ui/avatar';
 import { LoginForm } from '../profileNav/loginForm';
+import { useNavigate } from 'react-router-dom';
 
 import ProfilePanel from '@/pages/profile/panel';
 
@@ -30,6 +23,7 @@ const navItems: NavItem[] = [
 ];
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -46,7 +40,8 @@ const Navbar: React.FC = () => {
 
   const handleAvatarClick = (e: React.MouseEvent<HTMLDivElement>) => {
     console.log('Avatar clicked', e);
-    setShowMenu(!showMenu);
+    // setShowMenu(!showMenu);
+    navigate('/login');
   };
 
   const handleClose = () => {

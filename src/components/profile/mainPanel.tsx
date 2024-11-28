@@ -2,7 +2,8 @@ import React from 'react';
 import { Box } from '@chakra-ui/react';
 import BioCard from './bioCard';
 import RecentGamesCard from './recentGameCard';
-import RecentActivitiesCard from './recentActivitiesCard';
+import RecentOrdersCard from './recentOrdersCard';
+import RecentListingCard from './recentListingCard';
 
 const MainPanel: React.FC = () => {
   return (
@@ -16,7 +17,8 @@ const MainPanel: React.FC = () => {
     >
       <BioCard />
       <RecentGamesCard />
-      <RecentActivitiesCard />
+      <RecentOrdersCard />
+      <RecentListingCard />
     </Box>
   );
 };

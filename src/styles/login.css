@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.login-modal-overlay {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 120px;
+}
+
+.login-modal-input:focus {
+  outline: none;
+  border-color: #c20bf2;
+}
+
+.login-modal-button {
+  background-color: #2ea44f;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s;
+  width: 80%;
+}
+
+.auth-link {
+  cursor: pointer;
+}
+
+.login-modal-button:hover {
+  background-color: #22863a;
+}
+
+.login-modal-close:hover {
+  color: #c6c6c6;
+}
+
+.login-modal-link {
+  color: #b1a9ff;
+}
+
+.login-modal-link:hover {
+  text-decoration: underline;
+}

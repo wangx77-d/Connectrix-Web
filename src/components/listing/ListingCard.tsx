@@ -1,22 +1,19 @@
 import React from 'react';
 import { Box, Image, Text, Button } from '@chakra-ui/react';
 
-type ActivityCardProps = {
+type ListingCardProps = {
   index: number;
   title: string;
   dateRange: string;
   imageUrl: string;
-  buttonText: string;
   gradientBg?: string;
 };
 
-// Activity Card Component
-const ActivityCard: React.FC<ActivityCardProps> = ({
+const ListingCard: React.FC<ListingCardProps> = ({
   index,
   title,
   dateRange,
   imageUrl,
-  buttonText,
   gradientBg = '#2d2d2d',
 }) => {
   return (
@@ -58,4 +55,4 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
   );
 };
 
-export default ActivityCard;
+export default ListingCard;
