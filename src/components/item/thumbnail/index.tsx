@@ -42,7 +42,6 @@ const ItemCard: React.FC<ItemCardProps> = ({
       p={2}
       minWidth="150px"
       maxWidth="200px"
-      // height={200}
     >
       {isHotItem ? (
         <Badge

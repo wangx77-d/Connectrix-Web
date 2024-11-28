@@ -1,4 +1,3 @@
-// SidebarComponent.js
 import React from 'react';
 import { Box, VStack, Text, Icon, Flex } from '@chakra-ui/react';
 import { FaHome, FaInfo, FaList, FaGamepad } from 'react-icons/fa';
@@ -8,13 +7,16 @@ import {
   MdBorderColor,
 } from 'react-icons/md';
 
-import { Avatar } from '@/components/ui/avatar';
-
-import { FaChartPie, FaLink, FaCog } from 'react-icons/fa';
-
 const SidebarPanel: React.FC = () => {
   return (
-    <Box maxW="220px" h="100vh" p={6} shadow="lg" color="#888888">
+    <Box
+      minW="220px"
+      h="100vh"
+      p={6}
+      shadow="lg"
+      color="#888888"
+      mr={4}
+    >
       <VStack gap={6} alignItems="flex-start" ml={5} cursor="pointer">
         <Flex alignItems="center">
           <Icon fontSize="lg" mr={2} mb={1}>
@@ -24,7 +26,7 @@ const SidebarPanel: React.FC = () => {
         </Flex>
 
         <Flex alignItems="center">
-          <Icon fontSize="md" mr={2} mb={1}>
+          <Icon fontSize="md" mr={2}>
             <MdAccountCircle />
           </Icon>
           <Text fontSize="md">Accounts</Text>
@@ -41,7 +43,7 @@ const SidebarPanel: React.FC = () => {
           <Icon fontSize="md" mr={2} mb={1}>
             <MdBorderColor />
           </Icon>
-          <Text fontSize="lg">Orders</Text>
+          <Text fontSize="md">Orders</Text>
         </Flex>
 
         <Flex alignItems="center">

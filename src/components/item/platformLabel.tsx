@@ -8,11 +8,13 @@ import { IoGameController } from 'react-icons/io5';
 type PlatformLabelProps = {
   platform: string;
   size?: 'xs' | 'sm' | 'md' | 'lg';
+  style?: React.CSSProperties;
 };
 
 const PlatformLabel: React.FC<PlatformLabelProps> = ({
   platform,
   size = 'md',
+  style,
 }) => {
   let colorPalette;
   let icon;
@@ -46,6 +48,7 @@ const PlatformLabel: React.FC<PlatformLabelProps> = ({
       borderRadius={size}
       size={size}
       variant="solid"
+      style={style}
     >
       {icon}
       {platform}
