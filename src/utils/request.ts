@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
-const handleResponse = (data: GlobalRequest.Response<any>) => {
-    const { code, message } = data;
-    return { code, message };
-};
+// const handleResponse = (data: GlobalRequest.Response<any>) => {
+//     const { code, message } = data;
+//     return { code, message };
+// };
 
 const handleError = (res: any) => {
     if (!res) {
