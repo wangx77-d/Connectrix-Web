@@ -32,6 +32,7 @@ const Navbar: React.FC = () => {
         useState<React.ReactNode>(null);
 
     useEffect(() => {
+        console.log('Current path:', currentPath);
         if (currentPath === '/profile') {
             setAvatarIcon(<IoLogOutOutline />);
         } else {

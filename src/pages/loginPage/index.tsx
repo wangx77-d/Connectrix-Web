@@ -15,6 +15,14 @@ import { useNavigate } from 'react-router-dom';
 
 import { loginWithGoogle } from '@/apis/user';
 
+import navLogo from '../../assets/navLogo.svg';
+import googleIcon from '../../assets/googleIcon.svg';
+import fbIcon from '../../assets/fbIcon.svg';
+import nsIcon from '../../assets/nsIcon.png';
+import psIcon from '../../assets/psIcon.svg';
+import xbIcon from '../../assets/xbIcon.svg';
+import stIcon from '../../assets/stIcon.png';
+
 import '@/styles/login.css';
 
 const LoginPage: React.FC = () => {
@@ -41,7 +49,7 @@ const LoginPage: React.FC = () => {
         <div className="login-modal-overlay">
             <Box w="full" p={6}>
                 <Flex direction="column" align="center" mt={8}>
-                    <img src="/src/assets/navLogo.svg" alt="Logo" />
+                    <img src={navLogo} alt="Logo" />
                     <Text textStyle="xl" fontWeight="bold">
                         Sign in
                     </Text>
@@ -91,7 +99,7 @@ const LoginPage: React.FC = () => {
                         </Text>
                         <Group gap={4} mt={2}>
                             <Image
-                                src="/src/assets/googleIcon.svg"
+                                src={googleIcon}
                                 alt="google"
                                 boxSize="30px"
                                 borderRadius="full"
@@ -100,7 +108,7 @@ const LoginPage: React.FC = () => {
                                 onClick={handleAuthClick}
                             />
                             <Image
-                                src="/src/assets/fbIcon.svg"
+                                src={fbIcon}
                                 alt="facebook"
                                 boxSize="30px"
                                 borderRadius="full"
@@ -108,14 +116,14 @@ const LoginPage: React.FC = () => {
                                 className="auth-link"
                             />
                             <Image
-                                src="/src/assets/nsIcon.png"
+                                src={nsIcon}
                                 alt="nintendo"
                                 boxSize="30px"
                                 fit="cover"
                                 className="auth-link"
                             />
                             <Image
-                                src="/src/assets/psIcon.svg"
+                                src={psIcon}
                                 alt="playstation"
                                 boxSize="30px"
                                 borderRadius="full"
@@ -123,7 +131,7 @@ const LoginPage: React.FC = () => {
                                 className="auth-link"
                             />
                             <Image
-                                src="/src/assets/xbIcon.svg"
+                                src={xbIcon}
                                 alt="xbox"
                                 boxSize="30px"
                                 borderRadius="full"
@@ -131,7 +139,7 @@ const LoginPage: React.FC = () => {
                                 className="auth-link"
                             />
                             <Image
-                                src="/src/assets/stIcon.png"
+                                src={stIcon}
                                 alt="steam"
                                 boxSize="30px"
                                 borderRadius="full"
