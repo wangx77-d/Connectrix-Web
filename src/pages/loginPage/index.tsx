@@ -13,6 +13,8 @@ import { Field } from '@/components/ui/field';
 import { PasswordInput } from '@/components/ui/password-input';
 import { useNavigate } from 'react-router-dom';
 
+import { loginWithGoogle } from '@/apis/user';
+
 import '@/styles/login.css';
 
 const LoginPage: React.FC = () => {
@@ -30,6 +32,8 @@ const LoginPage: React.FC = () => {
         const target = e.target as HTMLImageElement;
         if (target.alt === 'google') {
             console.log('e?.target?.alt');
+            const res = loginWithGoogle();
+            console.log(res);
         }
     };
 
