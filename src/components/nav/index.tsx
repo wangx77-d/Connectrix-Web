@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { IoLogOutOutline } from 'react-icons/io5';
 import logoImg from '../../assets/navLogo.svg';
+import notificationSvg from '../../assets/notification.svg';
 
 // Define a type for navigation items
 type NavItem = {
@@ -82,7 +83,7 @@ const Navbar: React.FC = () => {
                     />
                     <Avatar
                         size="md"
-                        src="/src/assets/notification.svg"
+                        src={notificationSvg}
                         onClick={handleAvatarClick}
                         className="nav-notification"
                     />
