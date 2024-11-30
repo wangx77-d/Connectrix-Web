@@ -13,7 +13,7 @@ import { Field } from '@/components/ui/field';
 import { PasswordInput } from '@/components/ui/password-input';
 import { useNavigate } from 'react-router-dom';
 
-import { loginWithGoogle } from '@/apis/user';
+import { loginWithGoogle, login } from '@/apis/user';
 
 import navLogo from '../../assets/navLogo.svg';
 import googleIcon from '../../assets/googleIcon.svg';
@@ -26,12 +26,29 @@ import stIcon from '../../assets/stIcon.png';
 import '@/styles/login.css';
 
 const LoginPage: React.FC = () => {
+    const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('');
+
     const navigate = useNavigate();
 
     const handleSignIn = () => {
-        console.log('sign in');
-        // Perform sign-in logic here if needed
-        navigate('/profile'); // Route to "/profile"
+        console.log('email', email);
+        console.log('password', password);
+        login({ email, password }).then((res) => {
+            if (res.status === 200) {
+                if (res.data.token) {
+                    localStorage.setItem('x-token', res.data.token);
+                } else {
+                    console.error('Token is undefined');
+                }
+                window.alert('Login success');
+                setTimeout(() => navigate('/profile'), 1000);
+            } else {
+                // window.alert(res.message);
+            }
+        });
+
+        // navigate('/profile'); // Route to "/profile"
     };
 
     const handleAuthClick = (
@@ -70,6 +87,9 @@ const LoginPage: React.FC = () => {
                                 variant="subtle"
                                 className="login-modal-input"
                                 borderRadius="xl"
+                                onChange={(e) =>
+                                    setEmail(e.target.value)
+                                }
                             />
                         </Field>
                         <Field label="Password">
@@ -78,6 +98,9 @@ const LoginPage: React.FC = () => {
                                 variant="subtle"
                                 className="login-modal-input"
                                 borderRadius="xl"
+                                onChange={(e) =>
+                                    setPassword(e.target.value)
+                                }
                             />
                         </Field>
                         <Button

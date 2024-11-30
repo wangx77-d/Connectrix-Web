@@ -7,12 +7,6 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 //     return { code, message };
 // };
 
-const handleError = (res: any) => {
-    if (!res) {
-        return;
-    }
-};
-
 const instance = axios.create({
     baseURL: '', // TODO: config it after deploy
     timeout: 500000,
@@ -50,24 +44,22 @@ instance.interceptors.response.use(
         return response;
     },
     (err) => {
-        // 对响应错误做些什么
-        handleError(err.response);
-        return Promise.reject(err);
+        return Promise.reject(err.response.data);
     }
 );
 
 function request<T>(config: AxiosRequestConfig) {
     return instance
         .request<GlobalRequest.Response<T>>(config)
-        .then((res) => res.data)
+        .then((res) => res)
         .catch((e) => {
             console.error(
                 new Date(),
                 'request error:',
                 JSON.stringify(config),
-                e.name,
                 e.message
             );
+            window.alert(e.message);
             throw e;
         });
 }

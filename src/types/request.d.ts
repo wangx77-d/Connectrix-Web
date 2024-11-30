@@ -5,6 +5,7 @@ declare namespace GlobalRequest {
         data: D | any;
         message?: string;
         err?: string;
+        token?: string;
     }
     export interface AxiosResponse extends Response<D> {
         data: Response;
