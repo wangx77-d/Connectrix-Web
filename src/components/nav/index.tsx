@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
 
     useEffect(() => {
         console.log('Current path:', currentPath);
-        if (currentPath === '/profile') {
+        if (currentPath && currentPath.startsWith('/profile')) {
             setAvatarIcon(<IoLogOutOutline />);
         } else {
             setAvatarIcon(null);
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
         e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>
     ) => {
         console.log('Avatar clicked', e);
-        if (currentPath === '/profile') {
+        if (currentPath && currentPath.startsWith('/profile')) {
             navigate('/');
         } else {
             navigate('/login');
