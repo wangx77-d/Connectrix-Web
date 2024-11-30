@@ -6,6 +6,7 @@ import { Avatar } from '@/components/ui/avatar';
 import { useNavigate } from 'react-router-dom';
 
 import { IoLogOutOutline } from 'react-icons/io5';
+import logoImg from '../../assets/navLogo.svg';
 
 // Define a type for navigation items
 type NavItem = {
@@ -51,7 +52,7 @@ const Navbar: React.FC = () => {
     return (
         <div className="nav-container">
             <div className="nav-logo">
-                <img src="/src/assets/navLogo.svg" alt="Logo" />
+                <img src={logoImg} alt="Logo" />
             </div>
             <nav>
                 <ul>
