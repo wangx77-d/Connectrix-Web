@@ -8,6 +8,9 @@ import {
 import Layout from '@/components/layout';
 
 import Home from '@/pages/home';
+import Market from '@/pages/market';
+import News from '@/pages/news';
+import About from '@/pages/about';
 import Profile from '@/pages/profile';
 import ItemListing from '@/pages/items';
 // import ItemDetail from '@components/ItemDetail';
@@ -31,6 +34,30 @@ const App: React.FC = () => {
                     element={
                         <Layout>
                             <Home />
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/market"
+                    element={
+                        <Layout>
+                            <Market />
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/news"
+                    element={
+                        <Layout>
+                            <News />
+                        </Layout>
+                    }
+                />
+                <Route
+                    path="/about"
+                    element={
+                        <Layout>
+                            <About />
                         </Layout>
                     }
                 />
