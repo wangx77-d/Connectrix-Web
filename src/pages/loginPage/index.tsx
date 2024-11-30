@@ -66,7 +66,11 @@ const LoginPage: React.FC = () => {
         <div className="login-modal-overlay">
             <Box w="full" p={6}>
                 <Flex direction="column" align="center" mt={8}>
-                    <img src={navLogo} alt="Logo" />
+                    <img
+                        src={navLogo}
+                        alt="Logo"
+                        onClick={() => navigate('/')}
+                    />
                     <Text textStyle="xl" fontWeight="bold">
                         Sign in
                     </Text>
