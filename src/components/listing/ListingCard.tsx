@@ -54,7 +54,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
                 size="sm"
             >
                 <Text color="white" fontWeight="bold" fontSize="xs">
-                    {'Activity >'}
+                    {'Retrieve Item >'}
                 </Text>
             </Button>
         </Box>

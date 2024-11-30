@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, NavLink } from 'react-router-dom';
 import '@/styles/nav.css';
-import { Flex, Input, IconButton } from '@chakra-ui/react';
+import { Flex, Input, IconButton, Text } from '@chakra-ui/react';
+import {
+    PopoverArrow,
+    PopoverBody,
+    PopoverContent,
+    PopoverRoot,
+    PopoverTitle,
+    PopoverTrigger,
+} from '@/components/ui/popover';
 import { Avatar } from '@/components/ui/avatar';
 import { useNavigate } from 'react-router-dom';
 
@@ -40,6 +48,11 @@ const Navbar: React.FC = () => {
         }
     }, [currentPath]);
 
+    const handleNotificationClick = () => {
+        console.log('Notification clicked');
+        window.alert('No new notifications');
+    };
+
     const handleAvatarClick = (
         e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>
     ) => {
@@ -53,7 +66,7 @@ const Navbar: React.FC = () => {
 
     return (
         <div className="nav-container">
-            <div className="nav-logo">
+            <div className="nav-logo" onClick={() => navigate('/')}>
                 <img src={logoImg} alt="Logo" />
             </div>
             <nav>
@@ -72,6 +85,7 @@ const Navbar: React.FC = () => {
                     ))}
                 </ul>
             </nav>
+
             <div className="nav-profile">
                 <Flex justify="center" align="center" gap={4}>
                     <Input
@@ -82,10 +96,11 @@ const Navbar: React.FC = () => {
                         bg="#1f1f1f"
                         color="white"
                     />
+
                     <Avatar
                         size="md"
                         src={notificationSvg}
-                        onClick={handleAvatarClick}
+                        onClick={handleNotificationClick}
                         className="nav-notification"
                     />
 
