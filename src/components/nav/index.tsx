@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, NavLink } from 'react-router-dom';
 import '@/styles/nav.css';
-import { Flex, Input, IconButton, Text } from '@chakra-ui/react';
-import {
-    PopoverArrow,
-    PopoverBody,
-    PopoverContent,
-    PopoverRoot,
-    PopoverTitle,
-    PopoverTrigger,
-} from '@/components/ui/popover';
+import { Flex, Input, IconButton } from '@chakra-ui/react';
 import { Avatar } from '@/components/ui/avatar';
 import { useNavigate } from 'react-router-dom';
 
